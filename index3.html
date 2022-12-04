@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+   <head>
+      <meta charset="UTF-8">
+      <title>Virando a chave - Com Victor Lima</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link href="../uploads-ssl.webflow.com/6300074e510a183037a9e634/css/oinvestidorcompleto.webflow.a3d49505e.min.css" rel="stylesheet" type="text/css"/>
+     
+      <!-- Google Tag Manager -->
+      
+      <!-- End Luis Soto Hacks - UTM -->
+   </head>
+   <body>
+      <div class="main-wrapper">
+         <div id="lista" class="sec-ic-header wf-section">
+            <div class="page-padding ic-padding">
+               <div class="container-medium w-container">
+                  <div class="padding-vertical padding-custom1">
+                     <div class="menu-ic-wrapper">
+                        <div class="menu-ic-left"><img width="100" src="/logo.png" loading="lazy" alt="" class="logo-investidor"/></div>
+                        <div class="menu-ic-right">
+                           <a href="https://dashboard.kiwify.com.br/" class="link-aluno w-inline-block">
+                              <div class="student-box">
+                                 <img src="https://uploads-ssl.webflow.com/6300074e510a183037a9e634/630077be95f7177237dad13a_person icon.svg" loading="lazy" alt="" class="person-icon"/>
+                                 <div>
+                                    <div class="text-size-18px poppins-regular _10-8">Já sou aluno</div>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="w-layout-grid header-if-component">
+                        <div id="w-node-b9fc7741-3650-af0b-4090-02fc27e43106-9e1edeae" class="header-if-left">
+                           <div class="margin-bottom-15px">
+                              <h1 class="h1-ic desktop">VAGAS ENCERRADAS</h1>
+                            
+                           </div>
+                           <div class="margin-bottom-40px max-473px">
+                              <h3 class="h3-ic">Preencha abaixo para que nossa equipe entre em contato com você assim que liberar novas vagas!</h3>
+                           </div>
+                           <div class="margin-bottom-25px max-336px">
+                              <div class="form-lista w-form">
+
+                                 <form action="javascript:subirDatos()">
+                                    <div class="w-embed">
+                            
+                                       <script type="text/javascript">
+                                          function redirecionar(){
+                                             if(confirm("Cadastrado com sucesso!")){
+                                                window.location="https://chat.whatsapp.com/BQ6PGFcwKn3HUcB6rCNk1l";
+                                             }
+                                          }
+                                          </script>
+
+                                       <input id="nombre" class="nome-field w-input" type="text" name="nombre" placeholder="Seu Nome" required/>
+                                     </div>
+      
+                                     <div class="w-embed">
+                                     
+                                      <input id="email" class="nome-field w-input" type="email" name="email" placeholder="Email Válido" required/>
+                                    </div>
+                                   
+                                    <div class="w-embed">
+                                    
+                                      <input id="apellidos"class="nome-field w-input"  type="text" name="apellidos" placeholder="SEU NUMERO COM DDD ( )" required/>
+                                    </div>
+                                    <br>
+                                    <div class="w-embed">
+                                      <button onclick="redirecionar();" type="submit"   class="submit-button w-button">ENTRAR NA LISTA DE ESPERA</button>
+                                    </div>
+                                  </form>
+                                  <script src='https://www.gstatic.com/firebasejs/3.7.0/firebase.js'></script>
+                                  <script id="rendered-js">
+                                  // Initialize Firebase
+                                  var config = {
+                                    apiKey: "AIzaSyDuBNRHxl-GBrGZHfoiuBLSD3MRgVqU9MM",
+                                    authDomain: "melissa-labs.firebaseapp.com",
+                                    databaseURL: "https://melissa-labs-default-rtdb.firebaseio.com",
+                                    storageBucket: "melissa-labs.appspot.com",
+                                    messagingSenderId: "1:994004284694:web:df1603688b5c94b006cc37" };
+                                  
+                                  firebase.initializeApp(config);
+                                  
+                                  
+                                  
+                                  var formulario = firebase.database().ref().child('formulario');
+                                  
+                                  var inscritos = "";
+                                  
+                                  function subirDatos() {
+                                    var email = document.getElementById("email").value.trim();
+                                    var nombre = document.getElementById("nombre").value.trim();
+                                    var apellidos = document.getElementById("apellidos").value.trim();
+                                  
+                                  
+                                    //validar correo usuario
+                                    formulario.orderByChild('email').
+                                    equalTo(email).
+                                    once('value', function (snap) {//si uso on.() entrará la primera vez bien y el resto entrará en el else. Lo suyo es usar once cuando se trabajan con queries
+                                      var usuarioEncontrado = snap.val();
+                                      //si val es diferente a null es que ya está registrado
+                                      if (usuarioEncontrado !== null) {
+                                        var alerta = '<div class="alert alert-danger alert-dismissible" role="alert">';
+                                        alerta += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+                                        alerta += '<strong>Aviso!</strong> (' + email + ') Email já cadastrado.</div>';
+                                        document.getElementById('alerta').innerHTML = alerta;
+                                      } else {
+                                        formulario.push({
+                                          email: email,
+                                          nombre: nombre,
+                                          apellidos: apellidos });
+                                  
+                                  
+                                        /*
+                                        podría haber usado esta otra estructura menos conocida,
+                                        (se puede usar cuando clave y valor tienen el mismo naming)
+                                          formulario.push({
+                                              email, nombre, apellidos, edad
+                                          });              
+                                        */
+                                  
+                                      }
+                                    });
+                                  }
+                                  
+                                  formulario.on("child_added", function (snapshot) {
+                                    var nuevosInscritos = snapshot.val(); //snapshot de datos
+                                    inscritos += '<div class="panel panel-default"><div class="panel-body">';
+                                    inscritos += nuevosInscritos.nombre + ' ';
+                                    inscritos += '</div></div>';
+                                    document.getElementById("nuevosInscritos").innerHTML = inscritos;
+                                  });
+                                  //# sourceURL=pen.js
+                                      </script>
+
+                                
+                              </div>
+                           </div>
+                           <div class="header-students-box">
+                              <div class="margin-right-custom"><img src="../uploads-ssl.webflow.com/6300074e510a183037a9e634/63007a00226cea853f40f7fc_FOTOS%20ESTUDANTES.png" loading="lazy" alt="" class="image-students"/></div>
+                              <div class="box-students-text">
+                                 <div class="text-size-14px text-height-16-44px">Aprovado por alunos em todo Brasil</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="w-node-a774ef05-af56-4b1c-4a6a-8d02aaac3292-9e1edeae" class="header-if-right"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        
+         
+        
+         
+         <div class="sec-ic-bio wf-section">
+            <div class="page-padding ic-padding">
+               <div class="container-medium w-container">
+                  <div class="padding-vertical">
+                     <div class="w-layout-grid bio-ic-component">
+                        <div id="w-node-_24635b68-fabc-7bfe-4e0d-d13e34df0c82-9e1edeae" class="bio-ic-content-left"><img src="../uploads-ssl.webflow.com/6300074e510a183037a9e634/630101e03b1b4d1271b9d30c_LUCIANO%20BIO%20IC.png" loading="lazy" srcset="https://uploads-ssl.webflow.com/6300074e510a183037a9e634/630101e03b1b4d1271b9d30c_LUCIANO%20BIO%20IC-p-500.png 500w, ../uploads-ssl.webflow.com/6300074e510a183037a9e634/630101e03b1b4d1271b9d30c_LUCIANO%20BIO%20IC.png 698w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 400px, 698px" alt="" class="luciano-bio-if"/></div>
+                        <div id="w-node-_24635b68-fabc-7bfe-4e0d-d13e34df0c84-9e1edeae" class="bio-if-content-right">
+                           <div class="margin-bottom-custom43">
+                              <h1 class="h2-ic">Victor Lima</h1>
+                           </div>
+                           <div class="margin-bottom-45 max-width-532px">
+                              <div class="text-size-16px line-height-20px">Empreendedor e Sonhador<br><br>
+                                “Já ajudei vários alunos a virarem a chave de suas vidas através desse mercado. Chega de viver com limitações. Você vai conhecer o prazer da liberdade financeira. Sua família vai te agradecer por dar esse passo. Vem comigo!”</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         
+         
+      </div>
+    
+   </body>
+  
+</html>
