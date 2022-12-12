@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+   <head>
+      <meta charset="UTF-8">
+      <title>Virando a chave - Com Victor Lima</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         img.wp-smiley,
+         img.emoji {
+         display: inline !important;
+         border: none !important;
+         box-shadow: none !important;
+         height: 1em !important;
+         width: 1em !important;
+         margin: 0 0.07em !important;
+         vertical-align: -0.1em !important;
+         background: none !important;
+         padding: 0 !important;
+         }
+      </style>
+      <link rel='stylesheet' id='bdt-uikit-css'  href='wp-content/plugins/bdthemes-element-pack-lite/assets/css/bdt-uikit2916.css?ver=3.13.1' media='all' />
+      <link rel='stylesheet' id='ep-helper-css'  href='wp-content/plugins/bdthemes-element-pack-lite/assets/css/ep-helper5b31.css?ver=4.3.1' media='all' />
+      <link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min5b21.css?ver=6.0.2' media='all' />
+      <style id='wp-block-library-theme-inline-css'>
+         .wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
+      </style>
+      <link rel='stylesheet' id='activecampaign-form-block-css'  href='wp-content/plugins/activecampaign-subscription-forms/activecampaign-form-block/build/style-index6ee0.css?ver=1644315418' media='all' />
+      <style id='global-styles-inline-css'>
+         body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #28303D;--wp--preset--color--gray: #39414D;--wp--preset--color--green: #D1E4DD;--wp--preset--color--blue: #D1DFE4;--wp--preset--color--purple: #D1D1E4;--wp--preset--color--red: #E4D1D1;--wp--preset--color--orange: #E4DAD1;--wp--preset--color--yellow: #EEEADD;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--purple-to-yellow: linear-gradient(160deg, #D1D1E4 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-purple: linear-gradient(160deg, #EEEADD 0%, #D1D1E4 100%);--wp--preset--gradient--green-to-yellow: linear-gradient(160deg, #D1E4DD 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-green: linear-gradient(160deg, #EEEADD 0%, #D1E4DD 100%);--wp--preset--gradient--red-to-yellow: linear-gradient(160deg, #E4D1D1 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-red: linear-gradient(160deg, #EEEADD 0%, #E4D1D1 100%);--wp--preset--gradient--purple-to-red: linear-gradient(160deg, #D1D1E4 0%, #E4D1D1 100%);--wp--preset--gradient--red-to-purple: linear-gradient(160deg, #E4D1D1 0%, #D1D1E4 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 18px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--extra-small: 16px;--wp--preset--font-size--normal: 20px;--wp--preset--font-size--extra-large: 40px;--wp--preset--font-size--huge: 96px;--wp--preset--font-size--gigantic: 144px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+      </style>
+      <link rel='stylesheet' id='templately-editor-css'  href='wp-content/plugins/templately/assets/css/editor3ba1.css?ver=1.3.3' media='all' />
+      <link rel='stylesheet' id='wp-popup-css-css'  href='wp-content/plugins/wp-pop-up/assets/wp-popup9030.css?ver=1.2.4' media='all' />
+      <link rel='stylesheet' id='twenty-twenty-one-style-css'  href='wp-content/themes/twentytwentyone/style4e44.css?ver=1.3' media='all' />
+      <link rel='stylesheet' id='twenty-twenty-one-print-style-css'  href='wp-content/themes/twentytwentyone/assets/css/print4e44.css?ver=1.3' media='print' />
+      <link rel='stylesheet' id='elementor-icons-css'  href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.mine900.css?ver=5.14.0' media='all' />
+      <link rel='stylesheet' id='elementor-frontend-css'  href='wp-content/plugins/elementor/assets/css/frontend.mina25a.css?ver=3.5.5' media='all' />
+      <link rel='stylesheet' id='elementor-post-7-css'  href='wp-content/uploads/elementor/css/post-75e6f.css?ver=1645016289' media='all' />
+      <link rel='stylesheet' id='elementor-pro-css'  href='wp-content/plugins/elementor-pro/assets/css/frontend.min822f.css?ver=3.6.2' media='all' />
+      <link rel='stylesheet' id='elementor-global-css'  href='wp-content/uploads/elementor/css/globalf3fc.css?ver=1645016291' media='all' />
+      <link rel='stylesheet' id='elementor-post-2357-css'  href='wp-content/uploads/elementor/css/post-2357a037.css?ver=1659984626' media='all' />
+      <link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.0.2' media='all' />
+      <link rel='stylesheet' id='elementor-icons-shared-0-css'  href='wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min52d5.css?ver=5.15.3' media='all' />
+      <link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3' media='all' />
+      <link rel='stylesheet' id='elementor-icons-fa-brands-css'  href='wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min52d5.css?ver=5.15.3' media='all' />
+      <script src='wp-includes/js/jquery/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
+      <script src='wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+      <script src='wp-content/plugins/pixelyoursite/dist/scripts/jquery.bind-first-0.2.3.min5b21.js?ver=6.0.2' id='jquery-bind-first-js'></script>
+      <script src='wp-content/plugins/pixelyoursite/dist/scripts/js.cookie-2.1.3.min4c71.js?ver=2.1.3' id='js-cookie-js'></script>
+      <script id='pys-js-extra'>
+         var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"static","name":"PageView","eventID":"84a42102-bcf6-4135-aa0c-30d2dfac2069","pixelIds":["1216574652202580"],"params":{"page_title":"Opera\u00e7\u00e3o 6 D\u00edgitos - Inscri\u00e7\u00e3o - Nova","post_type":"page","post_id":2357,"plugin":"PixelYourSite","user_role":"guest","event_url":"operacaoseisdigitos.com\/"},"e_id":"init_event","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}]}},"dynamicEvents":{"signal_form":{"facebook":{"delay":0,"type":"dyn","name":"Signal","eventID":"0c0c8fde-5b38-4769-8774-9945d47dde0e","pixelIds":["1216574652202580"],"params":{"event_action":"Form","page_title":"Opera\u00e7\u00e3o 6 D\u00edgitos - Inscri\u00e7\u00e3o - Nova","post_type":"page","post_id":2357,"plugin":"PixelYourSite","user_role":"guest","event_url":"operacaoseisdigitos.com\/"},"e_id":"signal_form","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}},"signal_download":{"facebook":{"delay":0,"type":"dyn","name":"Signal","extensions":["","doc","exe","js","pdf","ppt","tgz","zip","xls"],"eventID":"40566e87-b243-4d61-8878-84133d161cc7","pixelIds":["1216574652202580"],"params":{"event_action":"Download","page_title":"Opera\u00e7\u00e3o 6 D\u00edgitos - Inscri\u00e7\u00e3o - Nova","post_type":"page","post_id":2357,"plugin":"PixelYourSite","user_role":"guest","event_url":"operacaoseisdigitos.com\/"},"e_id":"signal_download","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}},"signal_comment":{"facebook":{"delay":0,"type":"dyn","name":"Signal","eventID":"3fa8ae9c-40de-4ec6-a4a6-41c33446d752","pixelIds":["1216574652202580"],"params":{"event_action":"Comment","page_title":"Opera\u00e7\u00e3o 6 D\u00edgitos - Inscri\u00e7\u00e3o - Nova","post_type":"page","post_id":2357,"plugin":"PixelYourSite","user_role":"guest","event_url":"operacaoseisdigitos.com\/"},"e_id":"signal_comment","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}}},"triggerEvents":[],"triggerEventTypes":[],"facebook":{"pixelIds":["1216574652202580"],"advancedMatching":[],"removeMetadata":false,"contentParams":{"post_type":"page","post_id":2357,"content_name":"Opera\u00e7\u00e3o 6 D\u00edgitos - Inscri\u00e7\u00e3o - Nova"},"commentEventEnabled":true,"wooVariableAsSimple":false,"downloadEnabled":true,"formEventEnabled":true,"ajaxForServerEvent":true,"serverApiEnabled":true,"wooCRSendFromServer":false},"debug":"","siteUrl":"https:\/\/operacaoseisdigitos.com","ajaxUrl":"https:\/\/operacaoseisdigitos.com\/wp-admin\/admin-ajax.php","enable_remove_download_url_param":"1","gdpr":{"ajax_enabled":false,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"facebook_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":null,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_google_ads_consent_category":null,"cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","consent_magic_integration_enabled":false,"real_cookie_banner_integration_enabled":false,"cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false},"edd":{"enabled":false},"woo":{"enabled":false}};
+      </script>
+      <script src='wp-content/plugins/pixelyoursite/dist/scripts/public4088.js?ver=8.2.16' id='pys-js'></script>
+      <link rel="https://api.w.org/" href="wp-json/index.html" />
+      <link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/2357.json" />
+      <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+   </head>
+   <body class="home page-template page-template-elementor_canvas page page-id-2357 wp-embed-responsive is-light-theme no-js singular elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-2357">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
+         <defs>
+            <filter id="wp-duotone-dark-grayscale">
+               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+               <feComponentTransfer color-interpolation-filters="sRGB" >
+                  <feFuncR type="table" tableValues="0 0.49803921568627" />
+                  <feFuncG type="table" tableValues="0 0.49803921568627" />
+                  <feFuncB type="table" tableValues="0 0.49803921568627" />
+                  <feFuncA type="table" tableValues="1 1" />
+               </feComponentTransfer>
+               <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+         </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
+         <defs>
+            <filter id="wp-duotone-grayscale">
+               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+               <feComponentTransfer color-interpolation-filters="sRGB" >
+                  <feFuncR type="table" tableValues="0 1" />
+                  <feFuncG type="table" tableValues="0 1" />
+                  <feFuncB type="table" tableValues="0 1" />
+                  <feFuncA type="table" tableValues="1 1" />
+               </feComponentTransfer>
+               <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+         </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
+         <defs>
+            <filter id="wp-duotone-purple-yellow">
+               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+               <feComponentTransfer color-interpolation-filters="sRGB" >
+                  <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                  <feFuncG type="table" tableValues="0 1" />
+                  <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                  <feFuncA type="table" tableValues="1 1" />
+               </feComponentTransfer>
+               <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+         </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
+         <defs>
+            <filter id="wp-duotone-blue-red">
+               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+               <feComponentTransfer color-interpolation-filters="sRGB" >
+                  <feFuncR type="table" tableValues="0 1" />
+                  <feFuncG type="table" tableValues="0 0.27843137254902" />
+                  <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                  <feFuncA type="table" tableValues="1 1" />
+               </feComponentTransfer>
+               <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+         </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
+         <defs>
+            <filter id="wp-duotone-midnight">
+               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+               <feComponentTransfer color-interpolation-filters="sRGB" >
+                  <feFuncR type="table" tableValues="0 0" />
+                  <feFuncG type="table" tableValues="0 0.64705882352941" />
+                  <feFuncB type="table" tableValues="0 1" />
+                  <feFuncA type="table" tableValues="1 1" />
+               </feComponentTransfer>
+               <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+         </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
+         <defs>
+            <filter id="wp-duotone-magenta-yellow">
+               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+               <feComponentTransfer color-interpolation-filters="sRGB" >
+                  <feFuncR type="table" tableValues="0.78039215686275 1" />
+                  <feFuncG type="table" tableValues="0 0.94901960784314" />
+                  <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                  <feFuncA type="table" tableValues="1 1" />
+               </feComponentTransfer>
+               <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+         </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
+         <defs>
+            <filter id="wp-duotone-purple-green">
+               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+               <feComponentTransfer color-interpolation-filters="sRGB" >
+                  <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                  <feFuncG type="table" tableValues="0 1" />
+                  <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                  <feFuncA type="table" tableValues="1 1" />
+               </feComponentTransfer>
+               <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+         </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
+         <defs>
+            <filter id="wp-duotone-blue-orange">
+               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+               <feComponentTransfer color-interpolation-filters="sRGB" >
+                  <feFuncR type="table" tableValues="0.098039215686275 1" />
+                  <feFuncG type="table" tableValues="0 0.66274509803922" />
+                  <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                  <feFuncA type="table" tableValues="1 1" />
+               </feComponentTransfer>
+               <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+         </defs>
+      </svg>
+      <div data-elementor-type="wp-page" data-elementor-id="2357" class="elementor elementor-2357" data-elementor-settings="[]">
+         <div class="elementor-section-wrap">
+            
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-6db5bb7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6db5bb7" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+               <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0b080ec" data-id="0b080ec" data-element_type="column">
+                     <div class="elementor-widget-wrap elementor-element-populated">
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-265a94c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="265a94c" data-element_type="section">
+                           <div class="elementor-container elementor-column-gap-default">
+							
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-393f6a3 bdt-backdrop-filter-yes" data-id="393f6a3" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+								   <div class="elementor-element elementor-element-07e2db2 elementor-widget elementor-widget-image" data-id="07e2db2" data-element_type="widget" data-widget_type="image.default">
+									  <div class="elementor-widget-container">
+										 <img src="logo.png" title="NOVO WHITE" alt="NOVO WHITE" />															
+									  </div>
+								   </div>
+								   <div class="elementor-element elementor-element-65cab8b elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline" data-id="65cab8b" data-element_type="widget" data-settings="{&quot;highlighted_text&quot;:&quot;R$ 1.000&quot;,&quot;marker&quot;:&quot;x&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;highlight_animation_duration&quot;:1200,&quot;highlight_iteration_delay&quot;:8000}" data-widget_type="animated-headline.default">
+									  <div class="elementor-widget-container">
+										 <h3 class="elementor-headline">
+											<span class="elementor-headline-plain-text elementor-headline-text-wrapper">De</span>
+											<span class="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
+											<span class="elementor-headline-dynamic-text elementor-headline-text-active">R$ 1.347,90 </span>
+											</span>
+										 </h3>
+									  </div>
+								   </div>
+								   <div class="elementor-element elementor-element-f208bf2 elementor-widget elementor-widget-heading" data-id="f208bf2" data-element_type="widget" data-widget_type="heading.default">
+									  <div class="elementor-widget-container">
+										 <h2 class="elementor-heading-title elementor-size-default">VOCÊ VAI INVESTIR APENAS<br>
+											12 VEZES DE
+										 </h2>
+									  </div>
+								   </div>
+								   <div class="elementor-element elementor-element-8696f22 elementor-widget elementor-widget-heading" data-id="8696f22" data-element_type="widget" data-widget_type="heading.default">
+									  <div class="elementor-widget-container">
+										 <h2 class="elementor-heading-title elementor-size-default">R$29,91</h2>
+									  </div>
+								   </div>
+								   <div class="elementor-element elementor-element-85f1e1e elementor-widget elementor-widget-heading" data-id="85f1e1e" data-element_type="widget" data-widget_type="heading.default">
+									  <div class="elementor-widget-container">
+										 <h2 class="elementor-heading-title elementor-size-default">OU <span style="color: #38D300;">R$297,90</span> À VISTA</h2>
+									  </div>
+								   </div>
+								   <div class="elementor-element elementor-element-98fbca1 elementor-align-justify elementor-widget elementor-widget-button" data-id="98fbca1" data-element_type="widget" data-widget_type="button.default">
+									  <div class="elementor-widget-container">
+										 <div class="elementor-button-wrapper">
+											<a href="https://pay.kiwify.com.br/9OEF27O" class="elementor-button-link elementor-button elementor-size-lg" role="button" id="botaum">
+											<span class="elementor-button-content-wrapper">
+											<span class="elementor-button-text">Eu quero virar a chave da minha vida! 
+                                 </span>
+											</span>
+											</a>
+										 </div>
+									  </div>
+								   </div>
+								   <div class="elementor-element elementor-element-b8fdbe6 elementor-widget elementor-widget-heading" data-id="b8fdbe6" data-element_type="widget" data-widget_type="heading.default">
+									  <div class="elementor-widget-container">
+										 <h2 class="elementor-heading-title elementor-size-default">Nesse plano você terá acesso todo o conteúdo do curso.
+										 </h2>
+									  </div>
+								   </div>
+								</div>
+							 </div>
+							 &nbsp;&nbsp;&nbsp;
+                              <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-393f6a3 bdt-backdrop-filter-yes" data-id="393f6a3" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+                                 <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-07e2db2 elementor-widget elementor-widget-image" data-id="07e2db2" data-element_type="widget" data-widget_type="image.default">
+                                       <div class="elementor-widget-container">
+                                          <img src="logo.png" title="NOVO WHITE" alt="NOVO WHITE" />															
+                                       </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-65cab8b elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline" data-id="65cab8b" data-element_type="widget" data-settings="{&quot;highlighted_text&quot;:&quot;R$ 1.000&quot;,&quot;marker&quot;:&quot;x&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;highlight_animation_duration&quot;:1200,&quot;highlight_iteration_delay&quot;:8000}" data-widget_type="animated-headline.default">
+                                       <div class="elementor-widget-container">
+                                          <h3 class="elementor-headline">
+                                             <span class="elementor-headline-plain-text elementor-headline-text-wrapper">De</span>
+                                             <span class="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
+                                             <span class="elementor-headline-dynamic-text elementor-headline-text-active">R$ 3.497,90</span>
+                                             </span>
+                                          </h3>
+                                       </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-f208bf2 elementor-widget elementor-widget-heading" data-id="f208bf2" data-element_type="widget" data-widget_type="heading.default">
+                                       <div class="elementor-widget-container">
+                                          <h2 class="elementor-heading-title elementor-size-default">VOCÊ VAI INVESTIR APENAS<br>
+                                             12 VEZES DE
+                                          </h2>
+                                       </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-8696f22 elementor-widget elementor-widget-heading" data-id="8696f22" data-element_type="widget" data-widget_type="heading.default">
+                                       <div class="elementor-widget-container">
+                                          <h2 class="elementor-heading-title elementor-size-default">R$100,19</h2>
+                                       </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-85f1e1e elementor-widget elementor-widget-heading" data-id="85f1e1e" data-element_type="widget" data-widget_type="heading.default">
+                                       <div class="elementor-widget-container">
+                                          <h2 class="elementor-heading-title elementor-size-default">OU <span style="color: #38D300;">R$997,90</span> À VISTA</h2>
+                                       </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-98fbca1 elementor-align-justify elementor-widget elementor-widget-button" data-id="98fbca1" data-element_type="widget" data-widget_type="button.default">
+                                       <div class="elementor-widget-container">
+                                          <div class="elementor-button-wrapper">
+                                             <a href="https://pay.kiwify.com.br/TdyjkeJ" class="elementor-button-link elementor-button elementor-size-lg" role="button" id="botaum">
+                                             <span class="elementor-button-content-wrapper">
+                                             <span class="elementor-button-text">EU QUERO CURSO + MENTORIA!</span>
+                                             </span>
+                                             </a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-b8fdbe6 elementor-widget elementor-widget-heading" data-id="b8fdbe6" data-element_type="widget" data-widget_type="heading.default">
+                                       <div class="elementor-widget-container">
+                                          <h2 class="elementor-heading-title elementor-size-default">Nesse Plano Além do curso você terá acesso a mentoria em grupo e acesso ao grupo do whatsapp e análise de loja pra potencializar seu resultado.
+                                          </h2>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--<section class="elementor-section elementor-top-section elementor-element elementor-element-8b36b4c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8b36b4c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+               <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-563f579" data-id="563f579" data-element_type="column">
+                     <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-3832d88 elementor-widget elementor-widget-heading" data-id="3832d88" data-element_type="widget" data-widget_type="heading.default">
+                           <div class="elementor-widget-container">
+                              <h2 class="elementor-heading-title elementor-size-default">Quem bate a meta ganha um presente especial</h2>
+                           </div>
+                        </div>
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-2217805 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2217805" data-element_type="section">
+                           <div class="elementor-container elementor-column-gap-default">
+                              <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6330706" data-id="6330706" data-element_type="column">
+                                 <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-41b2454 elementor-widget elementor-widget-image" data-id="41b2454" data-element_type="widget" data-widget_type="image.default">
+                                       <div class="elementor-widget-container">
+                                          <img width="750" height="442" src="wp-content/uploads/2022/02/Placas-operacao-6-digitos.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://operacaoseisdigitos.com/wp-content/uploads/2022/02/Placas-operacao-6-digitos.png 1002w, https://operacaoseisdigitos.com/wp-content/uploads/2022/02/Placas-operacao-6-digitos-300x177.png 300w, https://operacaoseisdigitos.com/wp-content/uploads/2022/02/Placas-operacao-6-digitos-768x452.png 768w" sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:58.88%;max-width:1002px" />															
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-379d799" data-id="379d799" data-element_type="column">
+                                 <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-89bc343 elementor-widget elementor-widget-heading" data-id="89bc343" data-element_type="widget" data-widget_type="heading.default">
+                                       <div class="elementor-widget-container">
+                                          <h2 class="elementor-heading-title elementor-size-default">Fazemos questão de enviar uma placa personalizada para sua casa, assim que você atingir a marca de 10, 50 e 100.000  com sua Loja Da Nova Era. 
+                                             <br><br>
+                                             Toda semana sai placa nova para alguns alunos, e já entregamos dezenas dessas. Alguns alunos receberam essa placa com menos de 1 mês de treinamento.
+                                             <br><br>
+                                             (Estamos pensando em abrir uma fábrica de placas só pros alunos do Operação 6 Dígitos😂)
+                                             <br><br>
+                                             Quando vamos entregar a sua?
+                                          </h2>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+               </div>
+            </section>-->
+            <!--<section class="elementor-section elementor-top-section elementor-element elementor-element-a364f60 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a364f60" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+               <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0f99b7e" data-id="0f99b7e" data-element_type="column">
+                     <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-8a333c2 elementor-widget elementor-widget-heading" data-id="8a333c2" data-element_type="widget" data-widget_type="heading.default">
+                           <div class="elementor-widget-container">
+                              <h2 class="elementor-heading-title elementor-size-default">O melhor Suporte do Brasil</h2>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-573b456 elementor-arrows-position-outside elementor-pagination-position-outside elementor-widget elementor-widget-image-carousel" data-id="573b456" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;3&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;navigation&quot;:&quot;both&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500}" data-widget_type="image-carousel.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
+                                 <div class="elementor-image-carousel swiper-wrapper">
+                                    <div class="swiper-slide">
+                                       <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="wp-content/uploads/2022/08/WhatsApp-Image-2022-07-29-at-21.08.28-1-473x1024.jpg" alt="WhatsApp Image 2022-07-29 at 21.08.28 (1)" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="wp-content/uploads/2022/08/WhatsApp-Image-2022-07-29-at-21.08.28-473x1024.jpg" alt="WhatsApp Image 2022-07-29 at 21.08.28" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="wp-content/uploads/2022/08/WhatsApp-Image-2022-07-29-at-21.21.31.jpg" alt="WhatsApp Image 2022-07-29 at 21.21.31" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="wp-content/uploads/2022/08/WhatsApp-Image-2022-07-29-at-21.21.32-1-539x1024.jpg" alt="WhatsApp Image 2022-07-29 at 21.21.32 (1)" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="wp-content/uploads/2022/08/WhatsApp-Image-2022-07-29-at-21.21.32-472x1024.jpg" alt="WhatsApp Image 2022-07-29 at 21.21.32" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="wp-content/uploads/2022/08/WhatsApp-Image-2022-07-29-at-22.40.00-473x1024.jpg" alt="WhatsApp Image 2022-07-29 at 22.40.00" /></figure>
+                                    </div>
+                                 </div>
+                                 <div class="swiper-pagination"></div>
+                                 <div class="elementor-swiper-button elementor-swiper-button-prev">
+                                    <i aria-hidden="true" class="eicon-chevron-left"></i>						<span class="elementor-screen-only">Anterior</span>
+                                 </div>
+                                 <div class="elementor-swiper-button elementor-swiper-button-next">
+                                    <i aria-hidden="true" class="eicon-chevron-right"></i>						<span class="elementor-screen-only">Próximo</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-1bd7c85 elementor-align-center elementor-widget elementor-widget-button" data-id="1bd7c85" data-element_type="widget" data-widget_type="button.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-button-wrapper">
+                                 <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjIxMzEiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D" class="elementor-button-link elementor-button elementor-size-lg" role="button" id="botaum">
+                                 <span class="elementor-button-content-wrapper">
+                                 <span class="elementor-button-text">Quero Minha Liberdade Através de Loja Online</span>
+                                 </span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>-->
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-e6d2387 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e6d2387" data-element_type="section">
+               <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ff7d24e" data-id="ff7d24e" data-element_type="column">
+                     <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-e07c999 elementor-widget elementor-widget-heading" data-id="e07c999" data-element_type="widget" data-widget_type="heading.default">
+                           <div class="elementor-widget-container">
+                              <h2 class="elementor-heading-title elementor-size-default">Qual seu Risco?</h2>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-e9da5cf elementor-widget elementor-widget-heading" data-id="e9da5cf" data-element_type="widget" data-widget_type="heading.default">
+                           <div class="elementor-widget-container">
+                              <h2 class="elementor-heading-title elementor-size-default">Zero</h2>
+                           </div>
+                        </div>
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-9d73b28 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9d73b28" data-element_type="section">
+                           <div class="elementor-container elementor-column-gap-default">
+                              <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-bd9ad93" data-id="bd9ad93" data-element_type="column">
+                                 <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-c55e338 elementor-widget elementor-widget-image" data-id="c55e338" data-element_type="widget" data-widget_type="image.default">
+                                       <div class="elementor-widget-container">
+                                          <img src="wp-content/uploads/2021/07/selo-garantia-7-dias-small.png" title="selo-garantia-7-dias-small" alt="selo-garantia-7-dias-small" />															
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-99abfef" data-id="99abfef" data-element_type="column">
+                                 <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-fd73acb elementor-widget elementor-widget-heading" data-id="fd73acb" data-element_type="widget" data-widget_type="heading.default">
+                                       <div class="elementor-widget-container">
+                                          <h2 class="elementor-heading-title elementor-size-default">O risco é zero! <br>Se você estudar e aplicar todo o conteúdo, é impossível que você não tenha um resultado nos primeiros dias. Minha missão aqui é te levar o conhecimento para que você transforme a sua realidade atual, mas pra que isso aconteça a dedicação precisará ser 100% sua. Já ouvi de outros alunos que achavam que não iria dar certo, mas apenas por fazer o que tinha no curso e tiveram resultados surpreendentes.  A decisão é sua, caso você não goste, é só solicitar e será reembolsado dentro do prazo.
+                                          </h2>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--<section class="elementor-section elementor-top-section elementor-element elementor-element-f056047 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f056047" data-element_type="section">
+               <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4336875" data-id="4336875" data-element_type="column">
+                     <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-88412a7 elementor-widget elementor-widget-heading" data-id="88412a7" data-element_type="widget" data-widget_type="heading.default">
+                           <div class="elementor-widget-container">
+                              <h2 class="elementor-heading-title elementor-size-default"><br>  <span style="color:#DB9100" text-shadow:="" 5px="" 0="" #000="">Perguntas Frequentes</span></h2>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-9368c4b elementor-widget elementor-widget-toggle" data-id="9368c4b" data-element_type="widget" data-widget_type="toggle.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-toggle" role="tablist">
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1541" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1541" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Até quando posso me inscrever?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1541" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1541">
+                                       <p>Não temos uma data definida.</p>
+                                       <p>Mas quanto antes você tomar essa decisão, melhor para você.</p>
+                                       <p>Porque cada dia que você não tem uma loja da nova era vendendo, é um dia que você também está perdendo esse dinheiro potencial.</p>
+                                       <p>Não apenas o dinheiro, é claro, mas o potencial de mudar sua vida e da sua família com seu trabalho… </p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1542" class="elementor-tab-title" data-tab="2" role="tab" aria-controls="elementor-tab-content-1542" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">O que é exatamente a Loja da Nova Era?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1542" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-1542">
+                                       <p>A Loja da Nova Era é uma maneira nova de usar a forma mais antiga do mundo de conseguir dinheiro, usando a tecnologia para aproveitar a modernidade e que se baseia no <b>C.P.M.V</b>.:</p>
+                                       <p> </p>
+                                       <p> </p>
+                                       <p><strong>Criar sua loja</strong> (Quase sem custo) no melhor mercado possível</p>
+                                       <p>Ter acesso a <strong>Produtos</strong>, que vendem e saber ofertar para as melhores pessoas.</p>
+                                       <p>E <strong> Mostrar</strong> através da melhor plataforma para fazer isso para as pessoas que querem comprar de forma automática</p>
+                                       <p>Assim <strong>vendendo </strong>24h por dia através da sua Loja da Nova Era.</p>
+                                       <p> </p>
+                                       <p>É sobre criar uma loja online e ter sua vida realmente transforma com a melhor profissão do digital, que ainda é pouco conhecida.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1543" class="elementor-tab-title" data-tab="3" role="tab" aria-controls="elementor-tab-content-1543" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Funciona para mim?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1543" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-1543">
+                                       <p>A maior beleza da Loja da Nova Era, é que ela justamente não se trata apenas de criar uma loja online e ter uma fonte de renda.</p>
+                                       <p> </p>
+                                       <p>Melhor do que isso…</p>
+                                       <p> </p>
+                                       <p>Ele te ensina a como criar A LOJA online e realmente ser profissional nesse mercado, mesmo saindo do zero…</p>
+                                       <p> </p>
+                                       <p>O que ajuda qualquer pessoa a transformar seu computador em uma maquina de &#8220;imprimir&#8221; dinheiro, começando com seus mil, dois mil três mil reais e até 100mil reais por mês como diversos alunos.</p>
+                                       <p> </p>
+                                       <p>Na verdade, eu tenho tanta confiança no método, que acho que com ele, até alguém que não é familiar com a internet e tecnologia, por exemplo, pode fazer 100 mil ou mais por mês.</p>
+                                       <p>Por quê?</p>
+                                       <p> </p>
+                                       <p>Porque você aprende o passo a passo comigo entendendo o porquê de cada etapa.</p>
+                                       <p> </p>
+                                       <p>Enquanto também aprende a gerenciar sua loja e como escalar sua operação…</p>
+                                       <p> </p>
+                                       <p>Tudo isso desde o iniciante até o avançado, que ja delegou partes mais manuais da sua Loja da Nova Era.</p>
+                                       <p> </p>
+                                       <p>Então não… não importa muito como que você está hoje, porque a Loja da Nova erao pode funcionar para você.</p>
+                                       <p> </p>
+                                       <p><strong>MAS…</strong></p>
+                                       <p> </p>
+                                       <p>Vai exigir esforço, sentar a bunda na cadeira e aplicar, ter pelo menos 2h por dia de estudo e aplicação.</p>
+                                       <p> </p>
+                                       <p>E você pode se inscrever agora mesmo clicando no link abaixo.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1544" class="elementor-tab-title" data-tab="4" role="tab" aria-controls="elementor-tab-content-1544" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Minha compra é segura?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1544" class="elementor-tab-content elementor-clearfix" data-tab="4" role="tabpanel" aria-labelledby="elementor-tab-title-1544">
+                                       <p>Claro!</p>
+                                       <p>Processamos diretamente com um dos maiores gateways de pagamento do brasil, a <strong>evermart.</strong></p>
+                                       <p>Basta inserir seus dados e efetuar a transação 100% segura.</p>
+                                       <p>Assim que fizer isso, você vai receber um e-mail nosso, como esse daqui, com as informações de login e senha.</p>
+                                       <p>De lá, você poderá acessar nossa área privada de membros.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1545" class="elementor-tab-title" data-tab="5" role="tab" aria-controls="elementor-tab-content-1545" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Tem garantia?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1545" class="elementor-tab-content elementor-clearfix" data-tab="5" role="tabpanel" aria-labelledby="elementor-tab-title-1545">
+                                       <p>Sim, você tem 7 dias para testar o produto e ter certeza de que ele é para você.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1546" class="elementor-tab-title" data-tab="6" role="tab" aria-controls="elementor-tab-content-1546" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Quantas horas de conteúdo?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1546" class="elementor-tab-content elementor-clearfix" data-tab="6" role="tabpanel" aria-labelledby="elementor-tab-title-1546">
+                                       <p>São mais de 17 horas de conteúdo.</p>
+                                       <p>Além dos vídeos, também disponibilizamos slides, resumos, checklists e mapas mentais.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1547" class="elementor-tab-title" data-tab="7" role="tab" aria-controls="elementor-tab-content-1547" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Em quanto tempo vou ter resultados?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1547" class="elementor-tab-content elementor-clearfix" data-tab="7" role="tabpanel" aria-labelledby="elementor-tab-title-1547">
+                                       <p>Vou te pagar pela mão e ensinar tudo que sei, mas os resultados só aparecem quando você colocar em prática e fizer da maneira certa seguindo o passo a passo que te dou.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1548" class="elementor-tab-title" data-tab="8" role="tab" aria-controls="elementor-tab-content-1548" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Qual é o suporte que a Operação 6 Dígitos tem?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1548" class="elementor-tab-content elementor-clearfix" data-tab="8" role="tabpanel" aria-labelledby="elementor-tab-title-1548">
+                                       <p>A qualquer momento em horário comercial, você pode contactar um de nossos colaboradores para tirar dúvidas.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-1549" class="elementor-tab-title" data-tab="9" role="tab" aria-controls="elementor-tab-content-1549" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Por que você ensina a criar um negócio e não guarda esses segredos somente pra você?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-1549" class="elementor-tab-content elementor-clearfix" data-tab="9" role="tabpanel" aria-labelledby="elementor-tab-title-1549">
+                                       <p>Eu tenho a missão de ajudar as pessoas a transformarem suas vidas por meio do dropshipping. O mercado é muito grande e é IMPOSSÍVEL eu sozinho dominar todos os nichos, por isso não há nenhum problema em ajudar as pessoas conseguirem criar seus negócios online e terem suas vidas transformadas como eu tive a minha.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-15410" class="elementor-tab-title" data-tab="10" role="tab" aria-controls="elementor-tab-content-15410" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Posso assistir às aulas quantas vezes quiser?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-15410" class="elementor-tab-content elementor-clearfix" data-tab="10" role="tabpanel" aria-labelledby="elementor-tab-title-15410">
+                                       <p>Sim! O Acesso ao conteúdo é de um ano, então você pode assistir quando quiser e quantas vezes quiser.</p>
+                                    </div>
+                                 </div>
+                                 <div class="elementor-toggle-item">
+                                    <div id="elementor-tab-title-15411" class="elementor-tab-title" data-tab="11" role="tab" aria-controls="elementor-tab-content-15411" aria-expanded="false">
+                                       <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+                                       <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+                                       <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+                                       </span>
+                                       <a href="#" class="elementor-toggle-title">Como funciona o reembolso?</a>
+                                    </div>
+                                    <div id="elementor-tab-content-15411" class="elementor-tab-content elementor-clearfix" data-tab="11" role="tabpanel" aria-labelledby="elementor-tab-title-15411">
+                                       <p>Basta você enviar um e-mail para: suporte@operacaoseisdigitos.com com assunto de &#8220;reembolso&#8221; que nosso suporte faz o estorno da compra caso esteja na garantia. </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-5f205a8 elementor-align-center elementor-widget elementor-widget-button" data-id="5f205a8" data-element_type="widget" data-widget_type="button.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-button-wrapper">
+                                 <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjIxMzEiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D" class="elementor-button-link elementor-button elementor-size-lg" role="button" id="botaum">
+                                 <span class="elementor-button-content-wrapper">
+                                 <span class="elementor-button-text">Quero Minha Liberdade Através de Loja Online</span>
+                                 </span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-ef0e044 elementor-hidden-mobile elementor-widget elementor-widget-spacer" data-id="ef0e044" data-element_type="widget" data-widget_type="spacer.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-spacer">
+                                 <div class="elementor-spacer-inner"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-170e7b4 elementor-widget elementor-widget-heading" data-id="170e7b4" data-element_type="widget" data-widget_type="heading.default">
+                           <div class="elementor-widget-container">
+                              <h2 class="elementor-heading-title elementor-size-default">Ainda possui alguma dúvida?<br>Fale com minha equipe no <span style="color: #0FD303;">WhatsApp</span>!</h2>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-9b05cec elementor-hidden-mobile elementor-widget elementor-widget-spacer" data-id="9b05cec" data-element_type="widget" data-widget_type="spacer.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-spacer">
+                                 <div class="elementor-spacer-inner"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-e82750c elementor-widget elementor-widget-text-editor" data-id="e82750c" data-element_type="widget" data-widget_type="text-editor.default">
+                           <div class="elementor-widget-container">
+                              <p style="text-align: center;">Caso não tenha encontrado a informação que precisava, clique no botão abaixo e você será redirecionado para o whatsapp do meu time e terá sua resposta.</p>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-582f0a5 elementor-button-success elementor-align-center elementor-widget elementor-widget-button" data-id="582f0a5" data-element_type="widget" data-widget_type="button.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-button-wrapper">
+                                 <a href="https://api.whatsapp.com/send?phone=555199026676&amp;text=Tenho%20d%C3%BAvida%20do%20treinamento%20" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                                 <span class="elementor-button-content-wrapper">
+                                 <span class="elementor-button-icon elementor-align-icon-left">
+                                 <i aria-hidden="true" class="fab fa-whatsapp"></i>			</span>
+                                 <span class="elementor-button-text">CLIQUE AQUI PARA <br>TIRAR SUAS DÚVIDAS</span>
+                                 </span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-92424e4 elementor-hidden-mobile elementor-widget elementor-widget-spacer" data-id="92424e4" data-element_type="widget" data-widget_type="spacer.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-spacer">
+                                 <div class="elementor-spacer-inner"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="elementor-element elementor-element-daa3726 elementor-view-stacked elementor-widget__width-auto elementor-fixed elementor-shape-circle elementor-invisible elementor-widget elementor-widget-icon" data-id="daa3726" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="icon.default">
+                           <div class="elementor-widget-container">
+                              <div class="elementor-icon-wrapper">
+                                 <a class="elementor-icon" href="https://api.whatsapp.com/send?phone=555199026676&amp;text=Estou%20com%20d%C3%BAvida%20do%20treinamento!%20Pode%20me%20ajudar%3F">
+                                 <i aria-hidden="true" class="fab fa-whatsapp"></i>			</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>-->
+            
+         </div>
+      </div>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KQ23D6"
+         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+      <script>document.body.classList.remove("no-js");</script>	<script>
+         if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/index.html' ) ) {
+         	document.body.classList.add( 'is-IE' );
+         }
+      </script>
+      <div data-elementor-type="popup" data-elementor-id="2131" class="elementor elementor-2131 elementor-location-popup" data-elementor-settings="{&quot;timing&quot;:[]}">
+         <section class="elementor-section elementor-top-section elementor-element elementor-element-4ed4ce84 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4ed4ce84" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-container elementor-column-gap-default">
+               <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-345a80f9" data-id="345a80f9" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                  <div class="elementor-widget-wrap elementor-element-populated">
+                     <div class="elementor-element elementor-element-6aee317f elementor-widget elementor-widget-spacer" data-id="6aee317f" data-element_type="widget" data-widget_type="spacer.default">
+                        <div class="elementor-widget-container">
+                           <div class="elementor-spacer">
+                              <div class="elementor-spacer-inner"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="elementor-element elementor-element-72460e3b elementor-widget elementor-widget-heading" data-id="72460e3b" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                           <h2 class="elementor-heading-title elementor-size-xl">PREENCHA SEUS DADOS ABAIXO PARA CONTINUAR</h2>
+                        </div>
+                     </div>
+                     <div class="elementor-element elementor-element-36b07f23 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="36b07f23" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+                        <div class="elementor-widget-container">
+                           <script type="text/javascript">
+                              function redirecionar(){
+                                 if(confirm("Cadastrado com sucesso!")){
+                                    window.location="http://www.google.com.br/";
+                                 }
+                              }
+                              </script>
+                           <form action="javascript:subirDatos()">
+                              <div class="form-group">
+                                 <label for="nombre">Nome </label>
+                                 <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Seu Nome" required/>
+                               </div>
+
+                              <div class="form-group">
+                                <label for="email">Email: </label>
+                                <input id="email" class="form-control" type="email" name="email" placeholder="Email Válido" required/>
+                              </div>
+                             
+                              <div class="form-group">
+                                <label for="apellidos">Whatsapp/Telegram</label>
+                                <input id="apellidos" class="form-control" type="text" name="apellidos" placeholder="SEU NUMERO COM DDD ( )" required/>
+                              </div>
+                              <br>
+                              <div class="form-group">
+                                <button onclick="redirecionar();" type="submit" class="btn btn-default">Enviar</button>
+                              </div>
+                            </form>
+                        </div>
+                     </div>
+                     <script src='https://www.gstatic.com/firebasejs/3.7.0/firebase.js'></script>
+<script id="rendered-js">
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDuBNRHxl-GBrGZHfoiuBLSD3MRgVqU9MM",
+  authDomain: "melissa-labs.firebaseapp.com",
+  databaseURL: "https://melissa-labs-default-rtdb.firebaseio.com",
+  storageBucket: "melissa-labs.appspot.com",
+  messagingSenderId: "1:994004284694:web:df1603688b5c94b006cc37" };
+
+firebase.initializeApp(config);
+
+
+
+var formulario = firebase.database().ref().child('formulario');
+
+var inscritos = "";
+
+function subirDatos() {
+  var email = document.getElementById("email").value.trim();
+  var nombre = document.getElementById("nombre").value.trim();
+  var apellidos = document.getElementById("apellidos").value.trim();
+
+
+  //validar correo usuario
+  formulario.orderByChild('email').
+  equalTo(email).
+  once('value', function (snap) {//si uso on.() entrará la primera vez bien y el resto entrará en el else. Lo suyo es usar once cuando se trabajan con queries
+    var usuarioEncontrado = snap.val();
+    //si val es diferente a null es que ya está registrado
+    if (usuarioEncontrado !== null) {
+      var alerta = '<div class="alert alert-danger alert-dismissible" role="alert">';
+      alerta += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+      alerta += '<strong>Aviso!</strong> (' + email + ') Email já cadastrado.</div>';
+      document.getElementById('alerta').innerHTML = alerta;
+    } else {
+      formulario.push({
+        email: email,
+        nombre: nombre,
+        apellidos: apellidos });
+
+
+      /*
+      podría haber usado esta otra estructura menos conocida,
+      (se puede usar cuando clave y valor tienen el mismo naming)
+        formulario.push({
+            email, nombre, apellidos, edad
+        });              
+      */
+
+    }
+  });
+}
+
+formulario.on("child_added", function (snapshot) {
+  var nuevosInscritos = snapshot.val(); //snapshot de datos
+  inscritos += '<div class="panel panel-default"><div class="panel-body">';
+  inscritos += nuevosInscritos.nombre + ' ';
+  inscritos += '</div></div>';
+  document.getElementById("nuevosInscritos").innerHTML = inscritos;
+});
+//# sourceURL=pen.js
+    </script>
+                     <div class="elementor-element elementor-element-6817ef99 elementor-widget elementor-widget-text-editor" data-id="6817ef99" data-element_type="widget" data-widget_type="text-editor.default">
+                        <div class="elementor-widget-container">
+                           <p>De acordo com a lei 12.956/2014 e 13.709/2018, autorizo Operação 6 Dígitos a enviar comunicações por e-mail ou qualquer outro meio e concordo com sua poilítica de privacidade.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      <noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=1216574652202580&amp;ev=PageView&amp;noscript=1&amp;cd%5Bpage_title%5D=Opera%C3%A7%C3%A3o+6+D%C3%ADgitos+-+Inscri%C3%A7%C3%A3o+-+Nova&amp;cd%5Bpost_type%5D=page&amp;cd%5Bpost_id%5D=2357&amp;cd%5Bplugin%5D=PixelYourSite&amp;cd%5Buser_role%5D=guest&amp;cd%5Bevent_url%5D=operacaoseisdigitos.com%2F" alt="facebook_pixel"></noscript>
+      <link rel='stylesheet' id='elementor-post-2131-css'  href='wp-content/uploads/elementor/css/post-2131fd82.css?ver=1659142953' media='all' />
+      <link rel='stylesheet' id='e-animations-css'  href='wp-content/plugins/elementor/assets/lib/animations/animations.mina25a.css?ver=3.5.5' media='all' />
+      <link rel='stylesheet' id='google-fonts-2-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.0.2' media='all' />
+      <script id='site_tracking-js-extra'>
+         var php_data = {"ac_settings":{"tracking_actid":225107493,"site_tracking_default":1},"user_email":""};
+      </script>
+      <script src='wp-content/plugins/activecampaign-subscription-forms/site_tracking5b21.js?ver=6.0.2' id='site_tracking-js'></script>
+      <script src='wp-content/plugins/wp-pop-up/assets/wp-popup9030.js?ver=1.2.4' id='wp-popup-js-js'></script>
+      <script id='twenty-twenty-one-ie11-polyfills-js-after'>
+         ( Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach ) || document.write( '<script src="wp-content/themes/twentytwentyone/assets/js/polyfills4e44.js?ver=1.3"></scr' + 'ipt>' );
+      </script>
+
+
+<script src='https://operacaoseisdigitos.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script src='https://operacaoseisdigitos.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js'></script>
+<script id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Celular","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Celular extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.5.5","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"a11y_improvements":true,"e_import_export":true,"e_hidden_wordpress_widgets":true,"theme_builder_v2":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true,"page-transitions":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/operacaoseisdigitos.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":2357,"title":"Rafael%20Nascimento%20%E2%80%93%20Opera%C3%A7%C3%A3o%206%20D%C3%ADgitos","excerpt":"","featuredImage":false}};
+</script>
+
+      <script src='wp-content/themes/twentytwentyone/assets/js/responsive-embeds4e44.js?ver=1.3' id='twenty-twenty-one-responsive-embeds-script-js'></script>
+      <script src='wp-content/plugins/bdthemes-element-pack-lite/assets/vendor/js/anime.mindeae.js?ver=3.2.1' id='anime-js'></script>
+      <script id='bdt-uikit-js-extra'>
+         var element_pack_ajax_login_config = {"ajaxurl":"https:\/\/operacaoseisdigitos.com\/wp-admin\/admin-ajax.php","language":"pt","loadingmessage":"Sending user info, please wait...","unknownerror":"Unknown error, make sure access is correct!"};
+         var ElementPackConfig = {"ajaxurl":"https:\/\/operacaoseisdigitos.com\/wp-admin\/admin-ajax.php","nonce":"04ad17a164","data_table":{"language":{"lengthMenu":"Show _MENU_ Entries","info":"Showing _START_ to _END_ of _TOTAL_ entries","search":"Search :","paginate":{"previous":"Previous","next":"Next"}}},"contact_form":{"sending_msg":"Sending message please wait...","captcha_nd":"Invisible captcha not defined!","captcha_nr":"Could not get invisible captcha response!"},"mailchimp":{"subscribing":"Subscribing you please wait..."},"elements_data":{"sections":[],"columns":[],"widgets":[]}};
+      </script>
+      <script src='wp-content/plugins/bdthemes-element-pack-lite/assets/js/bdt-uikit.min2916.js?ver=3.13.1' id='bdt-uikit-js'></script>
+      <script src='wp-content/plugins/elementor/assets/js/webpack.runtime.mina25a.js?ver=3.5.5' id='elementor-webpack-runtime-js'></script>
+      
+      <script src='wp-content/plugins/elementor/assets/js/frontend-modules.mina25a.js?ver=3.5.5' id='elementor-frontend-modules-js'></script>
+      <script src='wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+      <script src='wp-includes/js/jquery/ui/core.min0028.js?ver=1.13.1' id='jquery-ui-core-js'></script>
+      <script src='wp-content/plugins/elementor/assets/js/frontend.mina25a.js?ver=3.5.5' id='elementor-frontend-js'></script>
+      <script src='wp-content/plugins/bdthemes-element-pack-lite/assets/js/modules/ep-floating-effects.min5b31.js?ver=4.3.1' id='ep-floating-effects-js'></script>
+      <script src='wp-content/plugins/bdthemes-element-pack-lite/assets/js/common/helper.min5b31.js?ver=4.3.1' id='element-pack-helper-js'></script>
+      <script src='wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min822f.js?ver=3.6.2' id='elementor-pro-webpack-runtime-js'></script>
+      <script src='wp-includes/js/dist/vendor/regenerator-runtime.min3937.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+      <script src='wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0' id='wp-polyfill-js'></script>
+      <script src='wp-includes/js/dist/hooks.mincbb5.js?ver=c6d64f2cb8f5c6bb49caca37f8828ce3' id='wp-hooks-js'></script>
+      <script src='wp-includes/js/dist/i18n.min771a.js?ver=ebee46757c6a411e38fd079a7ac71d94' id='wp-i18n-js'></script>
+      <script id='wp-i18n-js-after'>
+         wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+      </script>
+      <script id='elementor-pro-frontend-js-before'>
+         var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/operacaoseisdigitos.com\/wp-admin\/admin-ajax.php","nonce":"af05b178e7","urls":{"assets":"https:\/\/operacaoseisdigitos.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/operacaoseisdigitos.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/operacaoseisdigitos.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+      </script>
+      <script src='wp-content/plugins/elementor-pro/assets/js/frontend.min822f.js?ver=3.6.2' id='elementor-pro-frontend-js'></script>
+      <script src='wp-content/plugins/elementor-pro/assets/js/elements-handlers.min822f.js?ver=3.6.2' id='pro-elements-handlers-js'></script>
+      <script>
+         /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
+      </script>
+     	    <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+    
+                for (let i = 0; i < document.forms.length; ++i) {
+                    let form = document.forms[i];
+                if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="dSQTpUt-BYneFjuC" value="4K0w[zquiG6pFyI" />'); }
+    if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="P-dCiYcAxISkbtn" value="Y0]I@_yV6B" />'); }
+    if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="tWwTyqYPVvZbBRU" value="KthLZU.BIoTP" />'); }
+    if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="PKUpDjGozwAsai-x" value="DR@BzfUjYl6GT0a" />'); }
+                }
+    
+                $(document).on('submit', 'form', function () {
+                if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="dSQTpUt-BYneFjuC" value="4K0w[zquiG6pFyI" />'); }
+    if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="P-dCiYcAxISkbtn" value="Y0]I@_yV6B" />'); }
+    if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="tWwTyqYPVvZbBRU" value="KthLZU.BIoTP" />'); }
+    if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="PKUpDjGozwAsai-x" value="DR@BzfUjYl6GT0a" />'); }
+                    return true;
+                });
+    
+                jQuery.ajaxSetup({
+                    beforeSend: function (e, data) {
+    
+                        if (data.type !== 'POST') return;
+    
+                        if (typeof data.data === 'object' && data.data !== null) {
+                      data.data.append("dSQTpUt-BYneFjuC", "4K0w[zquiG6pFyI");
+    data.data.append("P-dCiYcAxISkbtn", "Y0]I@_yV6B");
+    data.data.append("tWwTyqYPVvZbBRU", "KthLZU.BIoTP");
+    data.data.append("PKUpDjGozwAsai-x", "DR@BzfUjYl6GT0a");
+                        }
+                        else {
+                            data.data = data.data + '&dSQTpUt-BYneFjuC=4K0w[zquiG6pFyI&P-dCiYcAxISkbtn=Y0]I@_yV6B&tWwTyqYPVvZbBRU=KthLZU.BIoTP&PKUpDjGozwAsai-x=DR@BzfUjYl6GT0a';
+                        }
+                    }
+                });
+    
+            });
+        </script>
+   </body>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</html>

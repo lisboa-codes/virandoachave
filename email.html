@@ -1,0 +1,89 @@
+<div class="container-fluid">
+    <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">CADASTROS.</a></li>
+    </ul>
+    </div>
+    <section class="no-padding-top">
+    <div class="container">
+    <div class="span10 offset1">
+    <hr>
+    <div id="nuevosInscritos">
+    <div class="panel panel-default">
+    <div class="panel-body">
+    <p class="text-center"><b></b>
+    </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src='https://www.gstatic.com/firebasejs/3.7.0/firebase.js'></script>
+    <script id="rendered-js">
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDuBNRHxl-GBrGZHfoiuBLSD3MRgVqU9MM",
+      authDomain: "melissa-labs.firebaseapp.com",
+      databaseURL: "https://melissa-labs-default-rtdb.firebaseio.com",
+      storageBucket: "melissa-labs.appspot.com",
+      messagingSenderId: "1:994004284694:web:df1603688b5c94b006cc37" };
+    
+    firebase.initializeApp(config);
+    
+    
+    
+    var formulario = firebase.database().ref().child('formulario');
+    
+    var inscritos = "";
+    
+    function subirDatos() {
+      var email = document.getElementById("email").value.trim();
+      var nombre = document.getElementById("nombre").value.trim();
+      var apellidos = document.getElementById("apellidos").value.trim();
+
+    
+      //validar correo usuario
+      formulario.orderByChild('email').
+      equalTo(email).
+      once('value', function (snap) {//si uso on.() entrará la primera vez bien y el resto entrará en el else. Lo suyo es usar once cuando se trabajan con queries
+        var usuarioEncontrado = snap.val();
+        //si val es diferente a null es que ya está registrado
+        if (usuarioEncontrado !== null) {
+          var alerta = '<div class="alert alert-danger alert-dismissible" role="alert">';
+          alerta += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+          alerta += '<strong>Aviso!</strong> (' + email + ') Email já cadastrado.</div>';
+          document.getElementById('alerta').innerHTML = alerta;
+        } else {
+          formulario.push({
+            email: email,
+            nombre: nombre,
+            apellidos: apellidos});
+    
+    
+          /*
+          podría haber usado esta otra estructura menos conocida,
+          (se puede usar cuando clave y valor tienen el mismo naming)
+            formulario.push({
+                email, nombre, apellidos, edad
+            });              
+          */
+    
+        }
+      });
+    }
+    
+    formulario.on("child_added", function (snapshot) {
+      var nuevosInscritos = snapshot.val(); //snapshot de datos
+      inscritos += '<div class="panel panel-default"><div class="panel-body">';
+      inscritos += nuevosInscritos.nombre + ' <br> Email :(' + nuevosInscritos.email + ')' + '<br> Whats : (' + nuevosInscritos.apellidos + ')<hr>';
+      inscritos += '</div></div>';
+      document.getElementById("nuevosInscritos").innerHTML = inscritos;
+    });
+    //# sourceURL=pen.js
+        </script>
+    
+    </section>
+    
+    
+    </div>
+    
+    </div>
+    
